@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="stylesheets/main.css" rel='stylesheet' type="text/css">
+    
+    <title>Form</title>
+</head>
+
+<body>
+<div class='form_board'>
+<input class='model' type='text' value='model' name='model'>
+    <input class='price' type='text' value='price' name='price'>
+    <input class='photo' type='text' value='url of photo' name='photo'>
+    <button class='bu1'  type='SUBMIT'>ADD CAR</button>
+    </div>
+<script src="javascript/main.js"></script>
+    <%# <script type="text/javascript">
+      document.querySelector('.bu1').addEventListener('click', (event) => {
+        const xhr = new XMLHttpRequest();
+        const car= {
+          model: document.querySelector('.model').value,
+          price: document.querySelector('.price').value,
+          photo: document.querySelector('.photo').value,
+        };
+
+        xhr.open('POST', '/cars/add', true);
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        xhr.send(`car=${JSON.stringify(car)}`);
+      });
+    </script> %>
+</body>
+
+
+</html>
